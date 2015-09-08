@@ -1,9 +1,9 @@
 Cogito Solutions Property Management Application
 
 Deployed at https://ebuck3.meteor.com this application was built in Meteor JS.
-There are several videos to walk you through the entire completion of this project.
+This is the first commit of this project to develop a property management app.
 
-1. The entire project starts with the Differential Boilerplate
+1. The project started with the Differential Boilerplate.
 
 
 
