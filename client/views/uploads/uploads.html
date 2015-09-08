@@ -1,0 +1,41 @@
+<template name="uploads">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Uploads</h3>
+    </div>
+    <div class="panel-body">
+      Add Files &nbsp;
+      <span class="btn btn-default btn-file">Browse <input type="file" name="myFileInput" class="myFileInput"></span>
+      <div class="fileTable">
+        <table class="table table-hover table-striped table-responsive">
+          <thead>
+            <th>File Name</th>
+            <th></th>
+          </thead>
+          <tbody>
+          {{#each uploads}}
+            {{>upload}}
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</template>
+
+<template name="upload">
+  <tr>
+    <td>{{#with this.url}}<a href="{{this}}" target="_blank">{{../name}}</a>{{else}}{{this.name}}{{/with}}</td>
+    <td><a href="{{url download=true}}" target="_blank" class="btn btn-xs btn-primary"><i class="fa fa-download"></i></a></td>
+    <td>
+      {{> FS.DeleteButton class="btn btn-danger btn-xs"}}
+      <!--{{#FS.DeleteButton class="btn btn-danger btn-xs"}}Delete {{/FS.DeleteButton}}-->
+      <!--{{> FS.DeleteButton class="btn btn-danger btn-xs"}}-->
+    </td>
+    <!--<td>{{#if isowner ..}} <i class="fa fa-trash removeFile"></i>{{/if}}</td> -->
+  </tr>
+  <tr>
+    <!--{{#with this.url}}<a href="{{this}}" target="_blank">{{../name}}</a>{{else}}{{this.name}}{{/with}} ({{this.size}} bytes)-->
+  </tr>
+</template>
