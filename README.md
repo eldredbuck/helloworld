@@ -4,6 +4,7 @@ Deployed at https://ebuck3.meteor.com this application was built in Meteor JS.
 This is the first commit of this project to develop a property management app.
 
 1. The project started with the Differential Boilerplate.
+2. The app warehouses client data
 
 
 
